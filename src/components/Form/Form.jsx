@@ -9,7 +9,7 @@ export default function Form({ setPicture, setLoading, setError }) {
       const response = await fetch(
         `https://api.nasa.gov/planetary/apod?api_key=Ij0ZDm6nUW5dhYbMLA6qVoH2hH5zFvDgpyXytaSq&date=${date}`,
       );
-      if (!response.ok) setError("Something went wrong");
+      if (!response.ok) throw new Error("Something went wrong");
       const result = await response.json();
       setPicture(result);
     } catch (err) {
