@@ -1,8 +1,28 @@
+.dataContainer {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 0.5rem;
+  height: 100%;
+  overflow: hidden;
+}
+.infoContainer {
+  color: #e2e8f0;
+  background-color: oklch(27.4% 0.006 286.033);
+
+  border-radius: 1rem;
+}
 .imgContainer {
   max-width: 100%;
   display: block;
+  background-color: oklch(27.4% 0.006 286.033);
+  overflow: hidden;
+
+  border-radius: 1rem;
 }
 .img {
-  width: 50%;
-  height: auto;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  object-fit: cover;
+  display: block;
 }

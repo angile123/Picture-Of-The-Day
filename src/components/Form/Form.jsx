@@ -1,3 +1,5 @@
+import styles from "./Form.module.css";
+
 export default function Form({ setPicture, setLoading, setError }) {
   async function handleSubmitForm(e) {
     e.preventDefault();
@@ -20,7 +22,8 @@ export default function Form({ setPicture, setLoading, setError }) {
   }
 
   return (
-    <form onSubmit={handleSubmitForm}>
+    // Form will be out of the flow.
+    <form onSubmit={handleSubmitForm} className={styles.container}>
       <input type="date" />
       <button>Submit</button>
     </form>

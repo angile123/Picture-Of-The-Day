@@ -1,0 +1,7 @@
+.container {
+  background-color: oklch(27.4% 0.006 286.033);
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}

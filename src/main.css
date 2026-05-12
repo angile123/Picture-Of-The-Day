@@ -3,3 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  background: oklch(21% 0.006 285.885);
+}
