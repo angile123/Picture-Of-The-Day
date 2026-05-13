@@ -1,7 +1,42 @@
-.container {
-  background-color: oklch(27.4% 0.006 286.033);
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+.formContainer {
+  display: grid;
+  gap: 0.3rem;
+}
+.spacingContainer {
+  display: grid;
+  gap: 0.6rem;
+  grid-auto-rows: 1fr;
+  border-radius: 0.5rem;
+}
+.pickDateContainer {
+  display: flex;
+  align-items: center;
+  border: 2px solid oklch(87% 0 0);
+  padding: 0.4rem 0.6rem;
+  justify-content: space-between;
+  border-radius: inherit;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.img {
+  max-width: 100%;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.btnSubmit {
+  padding: 0.4rem 0.6rem;
+  background-color: oklch(14.5% 0 0);
+  color: oklch(98.5% 0 0);
+  font-weight: 600;
+  border-radius: inherit;
+}
+.input {
+  border: none;
+  height: 100%;
+  padding: 0.3rem;
+}
+.formTitleP {
+  font-size: 0.833rem;
+  color: oklch(37.1% 0 0);
 }

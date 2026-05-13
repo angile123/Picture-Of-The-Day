@@ -1,28 +1,25 @@
-.dataContainer {
+.container {
   display: grid;
-  grid-template-columns: 40% 1fr;
-  gap: 0.5rem;
-  height: 100%;
-  overflow: hidden;
-}
-.infoContainer {
-  color: #e2e8f0;
-  background-color: oklch(27.4% 0.006 286.033);
-
-  border-radius: 1rem;
-}
-.imgContainer {
-  max-width: 100%;
-  display: block;
-  background-color: oklch(27.4% 0.006 286.033);
-  overflow: hidden;
-
-  border-radius: 1rem;
-}
-.img {
-  width: 100%;
+  grid-template-columns: 60% 1fr;
   height: 100vh;
-  min-height: 600px;
-  object-fit: cover;
-  display: block;
+  font-family: "Manrope", sans-serif;
+  max-width: 2000px;
+}
+
+.rightWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightContainer {
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 2000px) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
