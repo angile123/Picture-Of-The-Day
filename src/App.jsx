@@ -11,9 +11,7 @@ function App() {
 
   return (
     <Grid>
-      <div>
-        <Image loading={loading} data={data} error={error} />
-      </div>
+      <Image loading={loading} data={data} error={error} />
 
       <div className={styles.rightDisplay}>
         <div className={styles.rightWrapper}>
