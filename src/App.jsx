@@ -11,7 +11,7 @@ function App() {
 
   return (
     <Grid>
-      <div className={styles.leftDisplay}>
+      <div>
         <Image loading={loading} data={data} error={error} />
       </div>
 
