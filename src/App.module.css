@@ -1,0 +1,12 @@
+.rightDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightWrapper {
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  gap: 1.5rem;
+}

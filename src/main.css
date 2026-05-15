@@ -4,3 +4,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+.grid {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
+  max-width: 2000px;
+}
+@media (min-width: 2000px) {
+  .grid {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
