@@ -30,12 +30,12 @@ export default function Form({ setData, setLoading, setError }) {
       <p className={styles.formTitleP}>Select Date</p>
 
       <div className={styles.spacingContainer}>
-        <div className={styles.pickDateContainer}>
+        {/* <div className={styles.pickDateContainer}>
           <input type="text" placeholder="YY-MM-DD" className={styles.input} />
 
           <img src={calenderImg} alt="calender" className={styles.img} />
-        </div>
-
+        </div> */}
+        <input type="text" placeholder="YY-MM-DD" className={styles.input} />
         <button className={styles.btnSubmit}>Submit</button>
       </div>
     </form>

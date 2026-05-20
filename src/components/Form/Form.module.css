@@ -26,16 +26,24 @@
 }
 .btnSubmit {
   padding: 0.4rem 0.6rem;
-  background-color: oklch(14.5% 0 0);
+  background-color: oklch(48.8% 0.243 264.376);
   color: oklch(98.5% 0 0);
   font-weight: 600;
   border-radius: inherit;
   cursor: pointer;
+  border: none;
 }
+
 .input {
   border: none;
   height: 100%;
-  padding: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: inherit;
+  border: 2px solid oklch(14.5% 0 0);
+}
+
+.input:focus-visible {
+  outline: 2px solid oklch(58.8% 0.158 241.966);
 }
 .formTitleP {
   font-size: 0.833rem;
