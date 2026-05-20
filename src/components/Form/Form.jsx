@@ -1,6 +1,4 @@
 import styles from "./Form.module.css";
-import calenderImg from "../../calender.svg";
-// import { useEffect } from "react";
 
 export default function Form({ setData, setLoading, setError }) {
   async function handleForm(e) {
@@ -21,20 +19,11 @@ export default function Form({ setData, setLoading, setError }) {
     }
   }
 
-  // useEffect(() => {
-  //   async function fetchData(){}
-  // }, [])
-
   return (
     <form className={styles.formContainer} onSubmit={handleForm}>
       <p className={styles.formTitleP}>Select Date</p>
 
       <div className={styles.spacingContainer}>
-        {/* <div className={styles.pickDateContainer}>
-          <input type="text" placeholder="YY-MM-DD" className={styles.input} />
-
-          <img src={calenderImg} alt="calender" className={styles.img} />
-        </div> */}
         <input type="text" placeholder="YY-MM-DD" className={styles.input} />
         <button className={styles.btnSubmit}>Submit</button>
       </div>
