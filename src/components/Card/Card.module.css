@@ -9,3 +9,9 @@
   display: grid;
   gap: 1.5rem;
 }
+
+@media (max-height: 640px) {
+  .rightDisplay {
+    padding: 1.5rem 0;
+  }
+}
