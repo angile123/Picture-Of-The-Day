@@ -1,21 +1,19 @@
 import styles from "./Form.module.css";
-
+import { tryCatch } from "../../utils.jsx";
 export default function Form({ setData, setLoading, setError }) {
   async function handleForm(e) {
     e.preventDefault();
     setLoading(true);
     let date = e.target[0].value;
     const URL = `https://api.nasa.gov/planetary/apod?api_key=Ij0ZDm6nUW5dhYbMLA6qVoH2hH5zFvDgpyXytaSq&date=${date}`;
-    try {
-      const response = await fetch(URL);
-      if (!response.ok) throw new Error("HTTP error");
-      const data = await response.json();
+    const { data, err } = await tryCatch(URL);
+    setLoading(false);
+    if (err) {
+      setError(err);
+      setData(null);
+    } else if (data) {
       setData(data);
       setError(null);
-    } catch (err) {
-      setError(err);
-    } finally {
-      setLoading(false);
     }
   }
 
