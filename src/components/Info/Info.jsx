@@ -1,5 +1,7 @@
 import styles from "./Info.module.css";
 export default function Info({ data, loading, error }) {
+  let imgSrc = data ? data.url : "";
+  console.log(imgSrc);
   return (
     <div>
       {loading && (
@@ -15,7 +17,12 @@ export default function Info({ data, loading, error }) {
       )}
       {!error && !loading && data && (
         <div className={styles.infoContainer}>
-          <p className={styles.title}>{data.title}</p>
+          <p
+            style={{ backgroundImage: `url(${imgSrc})`, backgroundClip: "text" }}
+            className={styles.title}
+          >
+            {data.title}
+          </p>
           <p className={styles.desc}>{data.explanation}</p>
         </div>
       )}
