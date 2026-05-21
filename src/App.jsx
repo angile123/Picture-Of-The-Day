@@ -4,7 +4,7 @@ import Image from "./components/Image/Image.jsx";
 import Info from "./components/Info/Info.jsx";
 import Form from "./components/Form/Form.jsx";
 import Card from "./components/Card/Card.jsx";
-import { tryCatch } from "./utils.jsx";
+import { tryCatch } from "./utils.js";
 
 const URL = `https://api.nasa.gov/planetary/apod?api_key=Ij0ZDm6nUW5dhYbMLA6qVoH2hH5zFvDgpyXytaSq&date=2002-02-02`;
 
