@@ -1,6 +1,12 @@
 .imgMainContainer {
   height: 100vh;
 }
+@media (max-width: 800px) {
+  .imgMainContainer {
+    height: unset;
+  }
+}
+
 @media (max-height: 640px) {
   .imgMainContainer {
     height: 685px;

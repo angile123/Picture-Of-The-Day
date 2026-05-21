@@ -7,3 +7,14 @@
   object-fit: cover;
   display: block;
 }
+
+@media (max-width: 800px) {
+  .imgContainer {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 0.5rem;
+  }
+  .img {
+    border-radius: inherit;
+  }
+}
