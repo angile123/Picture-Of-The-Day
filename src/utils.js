@@ -16,7 +16,6 @@ export async function handleFormSubmit(e, { setData, setLoading, setError }) {
   const date = e.target[0].value;
   const URL = `https://api.nasa.gov/planetary/apod?api_key=Ij0ZDm6nUW5dhYbMLA6qVoH2hH5zFvDgpyXytaSq&date=${date}`;
   const { data, err } = await tryCatch(URL);
-  setLoading(false);
 
   if (err) {
     setError(err);
@@ -25,4 +24,22 @@ export async function handleFormSubmit(e, { setData, setLoading, setError }) {
     setData(data);
     setError(null);
   }
+  setLoading(null);
+}
+
+export async function handleInitialData(setData, setLoading, setError) {
+  setLoading(true);
+
+  const date = "2007-05-05";
+  const URL = `https://api.nasa.gov/planetary/apod?api_key=Ij0ZDm6nUW5dhYbMLA6qVoH2hH5zFvDgpyXytaSq&date=${date}`;
+  const { data, err } = await tryCatch(URL);
+
+  if (err) {
+    setError(err);
+    setData(null);
+  } else if (data) {
+    setData(data);
+    setError(null);
+  }
+  setLoading(null);
 }

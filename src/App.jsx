@@ -4,33 +4,19 @@ import Image from "./components/Image/Image.jsx";
 import Info from "./components/Info/Info.jsx";
 import Form from "./components/Form/Form.jsx";
 import Card from "./components/Card/Card.jsx";
-import { tryCatch } from "./utils.js";
-
-const URL = `https://api.nasa.gov/planetary/apod?api_key=Ij0ZDm6nUW5dhYbMLA6qVoH2hH5zFvDgpyXytaSq&date=2002-02-02`;
+import { handleInitialData } from "./utils.js";
 
 function App() {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-      const { data, err } = await tryCatch(URL);
-      setLoading(false);
-      if (err) {
-        setError(err);
-        setData(null);
-      } else if (data) {
-        setData(data);
-        setError(null);
-      }
-    }
-    fetchData();
+    handleInitialData(setData, setLoading, setError);
   }, []);
 
   return (
-    <Grid>
+    <Grid classes={["mainGridContainer"]}>
       <Image loading={loading} data={data} error={error} />
       <Card>
         <Info data={data} loading={loading} error={error} />

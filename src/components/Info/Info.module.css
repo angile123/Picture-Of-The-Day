@@ -12,43 +12,7 @@
   color: oklch(37.1% 0 0);
 }
 
-.loadingContainer {
-  display: grid;
-  gap: 0.5rem;
-}
-.loadingTitle {
-  height: 2.986rem;
-  animation: skeleton-loading 1s linear infinite alternate;
-}
-.loadingPContainer {
-  display: grid;
-  gap: 0.5rem;
-}
-.loadingP {
-  animation: skeleton-loading 1s linear infinite alternate;
-  height: 1rem;
-}
-.lastLoadingP {
-  width: 65%;
-  animation: skeleton-loading 1s linear infinite alternate;
-  height: 1rem;
-}
-.errorContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 0.833rem;
-}
 .infoContainer {
   display: grid;
   gap: 1rem;
-}
-@keyframes skeleton-loading {
-  0% {
-    background-color: hsl(200, 20%, 70%);
-  }
-  100% {
-    background-color: hsl(200, 20%, 95%);
-  }
 }

@@ -1,9 +1,7 @@
 .formContainer {
-  display: grid;
   gap: 0.3rem;
 }
 .spacingContainer {
-  display: grid;
   gap: 0.25rem;
   grid-template-columns: 1fr 25%;
   grid-auto-rows: 1fr;

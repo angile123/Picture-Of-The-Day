@@ -6,6 +6,8 @@
 }
 .grid {
   display: grid;
+}
+.mainGridContainer {
   grid-template-columns: 70% 1fr;
 
   height: 100vh;
